@@ -1,0 +1,57 @@
+.banner {
+  border: 5px solid #0f172a;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+/* faz o container ocupar a largura toda dentro do banner */
+.banner > .container {
+  width: 100%;
+}
+
+.mtec-logo {
+  max-height: 300px;
+  width: auto;
+  max-width: 100%;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Tablet e celular (mesmo ponto em que o Bootstrap empilha as colunas) */
+@media (max-width: 991.98px) {
+  .banner {
+    min-height: auto;
+    padding: 2rem 0 2.5rem;
+    text-align: center;
+  }
+
+  .banner h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner .lead {
+    font-size: 1rem;
+  }
+
+  .banner .mtec-logo {
+    width: 80px;       /* tamanho da logo no celular */
+    height: auto;
+    max-height: none;
+    margin-top: 1.5rem;
+    animation: none;    /* sem flutuar no celular, fica mais firme */
+  }
+}
+
+/* Celulares bem pequenos */
+@media (max-width: 400px) {
+  .banner .mtec-logo {
+    width: 60px;
+  }
+}
