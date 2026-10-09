@@ -1,6 +1,7 @@
+
 <!doctype html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -8,15 +9,14 @@
 
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/estilo.css" rel="stylesheet" />
-</head>
+  </head>
 
-  <!-- <body class="pt-5"> -->
   <body data-bs-theme="dark" style="padding-top: 80px">
-    <nav
-      class="navbar navbar-expand-md bg-dark fixed-top text-uppercase text-white"
-    >
+
+
+    <nav class="navbar navbar-expand-md bg-dark fixed-top text-uppercase text-white">
       <div class="container-fluid">
-        <!--<a class="navbar-brand" href="a">Início</a>-->
+
         <a class="navbar-brand active" href="index.html">
           <img
             src="imagens/mtec-lobo.png"
@@ -38,68 +38,187 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="menuprincipal">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
             <li class="nav-item">
-              <a
-                class="nav-link text-white"
-                href="primeiro.html"
-                aria-current="page"
-              >
+              <a class="nav-link text-white" href="primeiro.html">
                 1a. Série
               </a>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link text-white" href="segundo.html"> 2a. Série </a>
+              <a class="nav-link text-white" href="segundo.html">
+                2a. Série
+              </a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link text-white" href="terceiro.html">
                 3a. Série
               </a>
             </li>
+
           </ul>
+
           <a href="#" class="btn btn-primary">Matricule-se</a>
         </div>
       </div>
     </nav>
 
-<header
-  class="banner text-white"
-  style="background:
-    linear-gradient(90deg, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.70) 55%, rgba(15,23,42,0.30) 100%),
-    url('imagens/baner-de-teste.png') center right / cover no-repeat;"
->
-  <div class="container">
-    <div class="row align-items-center">
 
-      <!-- TEXTO -->
-      <div class="col-lg-7">
-        <h1 class="display-5 fw-bold">Mtec Informática para Internet</h1>
-        <p class="text-uppercase small fw-semibold mb-2">
-          Etec Prof. Milton Gazzetti. Presidente Venceslau
-        </p>
-        <p class="lead mb-4">
-          Curso técnico de informática para internet, com duração de 3 anos.
-        </p>
-        <a href="#" class="btn btn-primary">Matricule-se</a>
+    <header
+      class="banner text-white"
+      style="background:
+        linear-gradient(90deg, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.70) 55%, rgba(15,23,42,0.30) 100%),
+        url('imagens/baner-de-teste.png') center right / cover no-repeat;"
+    >
+
+      <div class="container">
+        <div class="row align-items-center">
+
+
+          <div class="col-lg-7">
+
+            <h1 class="display-5 fw-bold">
+              Mtec Informática para Internet
+            </h1>
+
+            <p class="text-uppercase small fw-semibold mb-2">
+              Etec Prof. Milton Gazzetti. Presidente Venceslau
+            </p>
+
+            <p class="lead mb-4">
+              Curso técnico de informática para internet, com duração de 3 anos.
+            </p>
+
+            <a href="#" class="btn btn-primary">Matricule-se</a>
+
+          </div>
+
+          <div class="col-lg-5 text-center mt-4 mt-lg-0">
+
+            <img
+              src="imagens/mtec-lobo2.png"
+              alt="Lobo Mtec Informática para Internet"
+              class="mtec-logo img-fluid"
+            />
+
+          </div>
+
+        </div>
       </div>
+    </header>
 
-      <!-- IMAGEM -->
-      <div class="col-lg-5 text-center mt-4 mt-lg-0">
-        <img
-          src="imagens/mtec-lobo2.png"
-          alt="Lobo Mtec Informática para Internet"
-          class="mtec-logo img-fluid"
-        />
+    <section class="container my-5">
+
+      <div
+        id="carouselMtec"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+
+        <div class="carousel-indicators">
+
+          <button
+            type="button"
+            data-bs-target="#carouselMtec"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselMtec"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselMtec"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+
+        </div>
+
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <img
+              src="imagens/imagem_1.png"
+              class="d-block w-100"
+              alt="Ilustração de interfaces digitais"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="imagens/imagem_2.png"
+              class="d-block w-100"
+              alt="Tela do Canva para criar um design"
+            />
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="imagens/imagem_3.png"
+              class="d-block w-100"
+              alt="Configuração de tamanho personalizado no Canva"
+            />
+          </div>
+
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselMtec"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+
+          <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <!-- Botão próximo -->
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselMtec"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+
+          <span class="visually-hidden">Próximo</span>
+        </button>
+
       </div>
+    </section>
 
-    </div>
-  </div>
-</header>
+    <!-- Conteúdo da página -->
+    <main class="container my-4">
 
-    <h1 class="text-primary">Mtec Informática para Internet</h1>
-    <p>Página principal do webSite</p>
+      <h1 class="text-primary">
+        Mtec Informática para Internet
+      </h1>
 
+      <p>Página principal do webSite</p>
+
+    </main>
+
+    <!-- JavaScript do Bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
