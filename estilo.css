@@ -1,3 +1,4 @@
+
 .banner {
   border: 5px solid #0f172a;
   min-height: 340px;
@@ -6,7 +7,6 @@
   padding: 3rem 0;
 }
 
-/* faz o container ocupar a largura toda dentro do banner */
 .banner > .container {
   width: 100%;
 }
@@ -19,12 +19,19 @@
 }
 
 @keyframes flutuar {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
-/* Tablet e celular (mesmo ponto em que o Bootstrap empilha as colunas) */
 @media (max-width: 991.98px) {
   .banner {
     min-height: auto;
@@ -41,17 +48,28 @@
   }
 
   .banner .mtec-logo {
-    width: 80px;       /* tamanho da logo no celular */
+    width: 80px;
     height: auto;
     max-height: none;
     margin-top: 1.5rem;
-    animation: none;    /* sem flutuar no celular, fica mais firme */
+    animation: none;
   }
 }
 
-/* Celulares bem pequenos */
 @media (max-width: 400px) {
   .banner .mtec-logo {
     width: 60px;
+  }
+}
+
+#carouselMtec .carousel-item img {
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  #carouselMtec .carousel-item img {
+    height: 250px;
   }
 }
