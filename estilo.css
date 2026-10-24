@@ -1,20 +1,207 @@
+/* =========================================
+   VARIÁVEIS DE COR (dourado + verdes da logo)
+========================================= */
 
-.banner {
-  border: 5px solid #0f172a;
-  min-height: 340px;
+:root {
+  --mtec-gold: #d4a62a;
+  --mtec-gold-light: #f0cf6b;
+  --mtec-gold-deep: #a67c00;
+
+  --mtec-green-900: #04150f;
+  --mtec-green-800: #0a2a1e;
+  --mtec-green-700: #0f3d2b;
+  --mtec-green-600: #14532d;
+  --mtec-green-500: #1f7a4d;
+
+  --mtec-text: #e8efe9;
+}
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  padding-top: 80px;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: var(--mtec-green-900);
+  color: var(--mtec-text);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--mtec-gold-light);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar-mtec {
+  min-height: 80px;
+  background: linear-gradient(
+    90deg,
+    var(--mtec-green-800) 0%,
+    var(--mtec-green-700) 55%,
+    var(--mtec-green-600) 100%
+  );
+  border-bottom: 2px solid var(--mtec-gold);
+}
+
+.navbar-brand {
   display: flex;
   align-items: center;
-  padding: 3rem 0;
+  padding: 0;
+}
+
+/* Logo logo.png da barra de navegação */
+.logo-navbar,
+.navbar-brand img {
+  display: block;
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid var(--mtec-gold);
+}
+
+.navbar .nav-link {
+  color: var(--mtec-gold);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--mtec-gold-light);
+  background-color: rgba(31, 122, 77, 0.45);
+}
+
+.navbar-toggler {
+  border-color: var(--mtec-gold);
+}
+
+/* =========================================
+   BOTÃO DE MATRÍCULA (dourado, letras brancas)
+========================================= */
+
+.btn-matricula {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.65rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+
+  color: #fff;
+  background: linear-gradient(180deg, #c99a1a 0%, var(--mtec-gold-deep) 100%);
+  border: 1px solid var(--mtec-gold-light);
+  border-radius: 8px;
+
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s,
+    background 0.15s;
+}
+
+.btn-matricula:hover,
+.btn-matricula:focus {
+  color: #fff;
+  background: linear-gradient(180deg, #e0b53a 0%, #b88a0a 100%);
+  box-shadow: 0 4px 14px rgba(212, 166, 42, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-matricula:active {
+  color: #fff;
+  transform: translateY(0);
+}
+
+.navbar .btn-matricula {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.85rem;
+}
+
+/* =========================================
+   BANNER PRINCIPAL
+========================================= */
+
+/*
+  O fundo do banner está no style do HTML:
+  url('imagens/banner_teste.png')
+*/
+
+.banner {
+  min-height: 520px;
+  padding: 90px 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
 }
 
 .banner > .container {
   width: 100%;
 }
 
+.banner h1 {
+  line-height: 1.15;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+.banner p {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+}
+
+.banner .text-uppercase {
+  color: var(--mtec-gold-light);
+}
+
+.banner .lead {
+  max-width: 650px;
+}
+
+/* =========================================
+   LOGO NO BANNER
+========================================= */
+
 .mtec-logo {
-  max-height: 300px;
-  width: auto;
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  max-height: 330px;
+  height: auto;
+  margin: 0 auto;
+
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
+
   animation: flutuar 3s ease-in-out infinite;
 }
 
@@ -32,44 +219,220 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .mtec-logo {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.titulo-dourado {
+  color: var(--mtec-gold);
+  font-weight: 700;
+}
+
+/* =========================================
+   CARROSSEL
+========================================= */
+
+#carouselMtec {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid var(--mtec-gold);
+}
+
+#carouselMtec .carousel-item img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: contain;
+  background-color: var(--mtec-green-800);
+}
+
+#carouselMtec .carousel-indicators [data-bs-target] {
+  background-color: var(--mtec-gold);
+}
+
+/* =========================================
+   CARDS (dourado sobre verde)
+========================================= */
+
+.card-mtec {
+  --bs-card-bg: var(--mtec-green-800);
+  --bs-card-border-color: var(--mtec-gold);
+  --bs-card-cap-bg: rgba(212, 166, 42, 0.14);
+  --bs-card-color: var(--mtec-text);
+
+  border: 1px solid var(--mtec-gold);
+}
+
+.card-mtec .card-header {
+  color: var(--mtec-gold-light);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(212, 166, 42, 0.45);
+}
+
+.card-mtec .card-title {
+  color: var(--mtec-gold);
+  font-weight: 700;
+}
+
+.card-mtec .card-text {
+  color: var(--mtec-text);
+}
+
+.card-group {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.card img {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
 @media (max-width: 991.98px) {
+  body {
+    padding-top: 75px;
+  }
+
+  .navbar-mtec {
+    min-height: 75px;
+  }
+
+  .logo-navbar,
+  .navbar-brand img {
+    width: 56px;
+    height: 56px;
+  }
+
   .banner {
     min-height: auto;
-    padding: 2rem 0 2.5rem;
+    padding: 70px 0;
     text-align: center;
+    background-position: center;
+  }
+
+  .banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner .lead {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1rem;
+  }
+
+  .mtec-logo {
+    max-width: 300px;
+    max-height: 300px;
+    margin-top: 25px;
+  }
+
+  #carouselMtec .carousel-item img {
+    height: 350px;
+  }
+}
+
+/* Menu aberto no celular: botão ocupa a largura toda */
+@media (max-width: 767.98px) {
+  .navbar .btn-matricula {
+    width: 100%;
+    margin: 0.5rem 0 0.75rem;
+  }
+}
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .navbar-mtec {
+    min-height: 70px;
+  }
+
+  .logo-navbar,
+  .navbar-brand img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .banner {
+    min-height: auto;
+    padding: 55px 20px 60px;
   }
 
   .banner h1 {
     font-size: 1.8rem;
   }
 
+  .banner p {
+    font-size: 0.9rem;
+  }
+
   .banner .lead {
     font-size: 1rem;
   }
 
-  .banner .mtec-logo {
-    width: 80px;
-    height: auto;
-    max-height: none;
-    margin-top: 1.5rem;
+  .mtec-logo {
+    width: 100%;
+    max-width: 260px;
+    max-height: 260px;
     animation: none;
   }
-}
 
-@media (max-width: 400px) {
-  .banner .mtec-logo {
-    width: 60px;
+  #carouselMtec .carousel-item img {
+    height: 250px;
+  }
+
+  .card-group {
+    display: block;
+  }
+
+  .card-group .card {
+    margin-bottom: 1rem;
   }
 }
 
-#carouselMtec .carousel-item img {
-  width: 100%;
-  height: 450px;
-  object-fit: contain;
-}
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
 
-@media (max-width: 576px) {
-  #carouselMtec .carousel-item img {
-    height: 250px;
+@media (max-width: 400px) {
+  .banner {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .banner h1 {
+    font-size: 1.6rem;
+  }
+
+  .logo-navbar,
+  .navbar-brand img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .mtec-logo {
+    max-width: 230px;
+    max-height: 230px;
   }
 }

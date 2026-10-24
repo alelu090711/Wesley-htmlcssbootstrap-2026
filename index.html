@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -8,20 +7,258 @@
     <title>Mtec Informática para Internet</title>
 
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/estilo.css" rel="stylesheet" />
+    <link href="css/estilo.css?v=2" rel="stylesheet" />
+
+    <!-- TEMA DOURADO + VERDE (fica aqui para funcionar mesmo se o estilo.css não carregar) -->
+    <style>
+      :root,
+      [data-bs-theme="dark"] {
+        --mtec-gold: #d4a62a;
+        --mtec-gold-light: #f0cf6b;
+        --mtec-gold-deep: #a67c00;
+        --mtec-green-900: #04150f;
+        --mtec-green-800: #0a2a1e;
+        --mtec-green-700: #0f3d2b;
+        --mtec-green-600: #14532d;
+        --mtec-text: #e8efe9;
+
+        --bs-body-bg: #04150f;
+        --bs-body-color: #e8efe9;
+      }
+
+      body {
+        background: linear-gradient(
+            180deg,
+            #04150f 0%,
+            #0a2a1e 55%,
+            #0f3d2b 100%
+          )
+          fixed;
+        color: var(--mtec-text);
+      }
+
+      .navbar-mtec {
+        background: linear-gradient(90deg, #0a2a1e 0%, #0f3d2b 55%, #14532d 100%);
+        border-bottom: 2px solid var(--mtec-gold);
+      }
+
+      .navbar .nav-link {
+        color: var(--mtec-gold);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .navbar .nav-link:hover,
+      .navbar .nav-link:focus {
+        color: var(--mtec-gold-light);
+      }
+
+      .navbar-brand img {
+        border-radius: 50%;
+        border: 2px solid var(--mtec-gold);
+      }
+
+      .btn-matricula {
+        padding: 0.65rem 1.4rem;
+        font-weight: 700;
+        line-height: 1.2;
+        white-space: nowrap;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+        background: linear-gradient(180deg, #c99a1a 0%, #a67c00 100%);
+        border: 1px solid var(--mtec-gold-light);
+        border-radius: 8px;
+      }
+
+      .btn-matricula:hover,
+      .btn-matricula:focus {
+        color: #fff;
+        background: linear-gradient(180deg, #e0b53a 0%, #b88a0a 100%);
+      }
+
+      .titulo-dourado {
+        color: var(--mtec-gold);
+        font-weight: 700;
+      }
+
+      #carouselMtec {
+        border: 2px solid var(--mtec-gold);
+      }
+
+      #carouselMtec .carousel-item img {
+        background-color: var(--mtec-green-800);
+      }
+
+      .card-mtec {
+        --bs-card-bg: var(--mtec-green-800);
+        --bs-card-border-color: var(--mtec-gold);
+        --bs-card-cap-bg: rgba(212, 166, 42, 0.14);
+        --bs-card-color: var(--mtec-text);
+        border: 1px solid var(--mtec-gold);
+      }
+
+      .card-mtec .card-header {
+        color: var(--mtec-gold-light);
+        font-weight: 600;
+      }
+
+      .card-mtec .card-title {
+        color: var(--mtec-gold);
+        font-weight: 700;
+      }
+
+      /* ===== LAYOUT (banner, navbar fixa, carrossel) ===== */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+      }
+
+      /* a navbar é fixa: o body precisa de espaço no topo,
+         senão ela cobre o começo do banner */
+      body {
+        padding-top: 80px;
+      }
+
+      .navbar-mtec {
+        min-height: 80px;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        padding: 0;
+      }
+
+      .navbar-brand img {
+        width: 62px;
+        height: 62px;
+        object-fit: contain;
+      }
+
+      .banner {
+        min-height: 520px;
+        padding: 90px 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .banner > .container {
+        width: 100%;
+      }
+
+      .banner h1 {
+        line-height: 1.15;
+        text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+      }
+
+      .banner p {
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.45);
+      }
+
+      .banner .text-uppercase {
+        color: var(--mtec-gold-light);
+      }
+
+      .banner .lead {
+        max-width: 650px;
+      }
+
+      #carouselMtec {
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      #carouselMtec .carousel-item img {
+        display: block;
+        width: 100%;
+        height: 450px;
+        object-fit: contain;
+      }
+
+      .card-group {
+        width: 100%;
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 1rem;
+      }
+
+      @media (max-width: 991.98px) {
+        body { padding-top: 75px; }
+        .navbar-mtec { min-height: 75px; }
+        .navbar-brand img { width: 56px; height: 56px; }
+
+        .banner {
+          min-height: auto;
+          padding: 70px 0;
+          text-align: center;
+        }
+
+        .banner h1 { font-size: 2.2rem; }
+
+        .banner .lead {
+          margin-right: auto;
+          margin-left: auto;
+          font-size: 1rem;
+        }
+
+        .mtec-logo {
+          max-width: 300px !important;
+          max-height: 300px !important;
+          margin-top: 25px;
+        }
+
+        #carouselMtec .carousel-item img { height: 350px; }
+      }
+
+      @media (max-width: 767.98px) {
+        .navbar .btn-matricula {
+          width: 100%;
+          margin: 0.5rem 0 0.75rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        body { padding-top: 70px; }
+        .navbar-mtec { min-height: 70px; }
+        .navbar-brand img { width: 50px; height: 50px; }
+
+        .banner { padding: 55px 20px 60px; }
+        .banner h1 { font-size: 1.8rem; }
+        .banner p { font-size: 0.9rem; }
+
+        .mtec-logo {
+          max-width: 260px !important;
+          max-height: 260px !important;
+        }
+
+        #carouselMtec .carousel-item img { height: 250px; }
+
+        .card-group { display: block; }
+        .card-group .card { margin-bottom: 1rem; }
+      }
+
+      @media (max-width: 400px) {
+        .banner { padding-right: 15px; padding-left: 15px; }
+        .banner h1 { font-size: 1.6rem; }
+        .navbar-brand img { width: 46px; height: 46px; }
+
+        .mtec-logo {
+          max-width: 230px !important;
+          max-height: 230px !important;
+        }
+      }
+    </style>
   </head>
 
-  <body data-bs-theme="dark" style="padding-top: 80px">
-
-    <nav class="navbar navbar-expand-md bg-dark fixed-top text-uppercase text-white">
+  <body data-bs-theme="dark" class="overflow-x-hidden">
+    <nav class="navbar navbar-expand-md navbar-mtec fixed-top text-uppercase">
       <div class="container-fluid">
-
         <a class="navbar-brand active" href="index.html">
           <img
-            src="imagens/mtec-lobo.png"
+            src="imagens/logo.png"
             alt="Logo Mtec"
-            width="60"
-            height="60"
+            width="62"
+            height="62"
             class="d-inline-block align-text-top"
           />
         </a>
@@ -40,47 +277,45 @@
 
         <div class="collapse navbar-collapse" id="menuprincipal">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
             <li class="nav-item">
-              <a class="nav-link text-white" href="primeiro.html">
-                1a. Série
-              </a>
+              <a class="nav-link" href="primeiro.html"> 1ª Série </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-white" href="segundo.html">
-                2a. Série
-              </a>
+              <a class="nav-link" href="segundo.html"> 2ª Série </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-white" href="terceiro.html">
-                3a. Série
-              </a>
+              <a class="nav-link" href="terceiro.html"> 3ª Série </a>
             </li>
-
           </ul>
 
-          <a href="#" class="btn btn-primary">Matricule-se</a>
+          <a href="#matricula" class="btn btn-matricula"> Matricule-se </a>
         </div>
       </div>
     </nav>
 
     <header
-      class="banner text-white"
-      style="background:
-        linear-gradient(90deg, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.70) 55%, rgba(15,23,42,0.30) 100%),
-        url('imagens/baner-de-teste.png') center right / cover no-repeat;"
-    >
+      class="banner text-white overflow-hidden"
+      style="
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(4, 21, 15, 0.94) 0%,
+            rgba(10, 42, 30, 0.76) 48%,
+            rgba(15, 61, 43, 0.3) 100%
+          ),
+          url(&quot;imagens/banner_teste.png&quot;);
 
+        background-position: center right;
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
       <div class="container">
         <div class="row align-items-center">
-
           <div class="col-lg-7">
-
-            <h1 class="display-5 fw-bold">
-              Mtec Informática para Internet
-            </h1>
+            <h1 class="display-5 fw-bold">Mtec Informática para Internet</h1>
 
             <p class="text-uppercase small fw-semibold mb-2">
               Etec Prof. Milton Gazzetti. Presidente Venceslau
@@ -90,34 +325,30 @@
               Curso técnico de informática para internet, com duração de 3 anos.
             </p>
 
-            <a href="#" class="btn btn-primary">Matricule-se</a>
-
+            <a href="#matricula" class="btn btn-matricula"> Matricule-se </a>
           </div>
 
           <div class="col-lg-5 text-center mt-4 mt-lg-0">
-
             <img
-              src="imagens/mtec-lobo2.png"
+              src="imagens/logo.png"
               alt="Lobo Mtec Informática para Internet"
               class="mtec-logo img-fluid"
+              style="
+                width: 100%;
+                max-width: 380px;
+                max-height: 330px;
+                height: auto;
+                object-fit: contain;
+              "
             />
-
           </div>
-
         </div>
       </div>
     </header>
 
     <section class="container my-5">
-
-      <div
-        id="carouselMtec"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-
+      <div id="carouselMtec" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-
           <button
             type="button"
             data-bs-target="#carouselMtec"
@@ -140,11 +371,9 @@
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
-
         </div>
 
         <div class="carousel-inner">
-
           <div class="carousel-item active">
             <img
               src="imagens/imagem_1.png"
@@ -168,7 +397,6 @@
               alt="Configuração de tamanho personalizado no Canva"
             />
           </div>
-
         </div>
 
         <button
@@ -177,12 +405,9 @@
           data-bs-target="#carouselMtec"
           data-bs-slide="prev"
         >
-          <span
-            class="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
 
-          <span class="visually-hidden">Anterior</span>
+          <span class="visually-hidden"> Anterior </span>
         </button>
 
         <button
@@ -191,29 +416,96 @@
           data-bs-target="#carouselMtec"
           data-bs-slide="next"
         >
-          <span
-            class="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
 
-          <span class="visually-hidden">Próximo</span>
+          <span class="visually-hidden"> Próximo </span>
         </button>
-
       </div>
     </section>
 
+    <main class="container my-5">
+      <h2 class="titulo-dourado">Mtec Informática para Internet</h2>
 
-    <main class="container my-4">
+      <p>Página principal do website.</p>
 
-      <h1 class="text-primary">
-        Mtec Informática para Internet
-      </h1>
+      <!-- TRÊS CARDS DOURADOS -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+        <div class="col">
+          <div class="card card-mtec h-100">
+            <div class="card-header">Aprendizado</div>
+            <div class="card-body">
+              <h5 class="card-title">Programação e sites</h5>
+              <p class="card-text">
+                Aprenda a programar e a criar sites completos, do código à
+                publicação.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <p>Página principal do webSite</p>
+        <div class="col">
+          <div class="card card-mtec h-100">
+            <div class="card-header">Design</div>
+            <div class="card-body">
+              <h5 class="card-title">Interfaces digitais</h5>
+              <p class="card-text">
+                Crie designs e interfaces com ferramentas como o Canva.
+              </p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col">
+          <div class="card card-mtec h-100">
+            <div class="card-header">Mercado</div>
+            <div class="card-body">
+              <h5 class="card-title">Carreira em tecnologia</h5>
+              <p class="card-text">
+                Em 3 anos, saia com habilidades práticas para trabalhar com
+                informática e internet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <section id="matricula" class="card-group">
+      <div class="card card-mtec">
+        <div class="card-body">
+          <h5 class="card-title">Aprenda tecnologia</h5>
 
+          <p class="card-text">
+            Desenvolva conhecimentos em programação, design e criação de sites.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-mtec">
+        <div class="card-body">
+          <h5 class="card-title">Prepare-se para o mercado</h5>
+
+          <p class="card-text">
+            Aprenda habilidades práticas para trabalhar com informática e
+            internet.
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-mtec">
+        <div class="card-body">
+          <h5 class="card-title">Faça sua matrícula</h5>
+
+          <p class="card-text">
+            Entre em contato com a escola para saber mais informações sobre o
+            curso.
+          </p>
+
+          <a href="#" class="btn btn-matricula"> Quero me matricular </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
