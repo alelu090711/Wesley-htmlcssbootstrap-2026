@@ -7,9 +7,8 @@
     <title>Mtec Informática para Internet</title>
 
     <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/estilo.css?v=2" rel="stylesheet" />
+    <link href="css/estilo.css?v=3" rel="stylesheet" />
 
-    <!-- TEMA DOURADO + VERDE (fica aqui para funcionar mesmo se o estilo.css não carregar) -->
     <style>
       :root,
       [data-bs-theme="dark"] {
@@ -38,7 +37,12 @@
       }
 
       .navbar-mtec {
-        background: linear-gradient(90deg, #0a2a1e 0%, #0f3d2b 55%, #14532d 100%);
+        background: linear-gradient(
+          90deg,
+          #0a2a1e 0%,
+          #0f3d2b 55%,
+          #14532d 100%
+        );
         border-bottom: 2px solid var(--mtec-gold);
       }
 
@@ -107,14 +111,11 @@
         font-weight: 700;
       }
 
-      /* ===== LAYOUT (banner, navbar fixa, carrossel) ===== */
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 90px;
       }
 
-      /* a navbar é fixa: o body precisa de espaço no topo,
-         senão ela cobre o começo do banner */
       body {
         padding-top: 80px;
       }
@@ -183,9 +184,16 @@
       }
 
       @media (max-width: 991.98px) {
-        body { padding-top: 75px; }
-        .navbar-mtec { min-height: 75px; }
-        .navbar-brand img { width: 56px; height: 56px; }
+        body {
+          padding-top: 75px;
+        }
+        .navbar-mtec {
+          min-height: 75px;
+        }
+        .navbar-brand img {
+          width: 56px;
+          height: 56px;
+        }
 
         .banner {
           min-height: auto;
@@ -193,7 +201,9 @@
           text-align: center;
         }
 
-        .banner h1 { font-size: 2.2rem; }
+        .banner h1 {
+          font-size: 2.2rem;
+        }
 
         .banner .lead {
           margin-right: auto;
@@ -207,7 +217,9 @@
           margin-top: 25px;
         }
 
-        #carouselMtec .carousel-item img { height: 350px; }
+        #carouselMtec .carousel-item img {
+          height: 350px;
+        }
       }
 
       @media (max-width: 767.98px) {
@@ -218,29 +230,56 @@
       }
 
       @media (max-width: 576px) {
-        body { padding-top: 70px; }
-        .navbar-mtec { min-height: 70px; }
-        .navbar-brand img { width: 50px; height: 50px; }
+        body {
+          padding-top: 70px;
+        }
+        .navbar-mtec {
+          min-height: 70px;
+        }
+        .navbar-brand img {
+          width: 50px;
+          height: 50px;
+        }
 
-        .banner { padding: 55px 20px 60px; }
-        .banner h1 { font-size: 1.8rem; }
-        .banner p { font-size: 0.9rem; }
+        .banner {
+          padding: 55px 20px 60px;
+        }
+        .banner h1 {
+          font-size: 1.8rem;
+        }
+        .banner p {
+          font-size: 0.9rem;
+        }
 
         .mtec-logo {
           max-width: 260px !important;
           max-height: 260px !important;
         }
 
-        #carouselMtec .carousel-item img { height: 250px; }
+        #carouselMtec .carousel-item img {
+          height: 250px;
+        }
 
-        .card-group { display: block; }
-        .card-group .card { margin-bottom: 1rem; }
+        .card-group {
+          display: block;
+        }
+        .card-group .card {
+          margin-bottom: 1rem;
+        }
       }
 
       @media (max-width: 400px) {
-        .banner { padding-right: 15px; padding-left: 15px; }
-        .banner h1 { font-size: 1.6rem; }
-        .navbar-brand img { width: 46px; height: 46px; }
+        .banner {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .banner h1 {
+          font-size: 1.6rem;
+        }
+        .navbar-brand img {
+          width: 46px;
+          height: 46px;
+        }
 
         .mtec-logo {
           max-width: 230px !important;
@@ -330,11 +369,8 @@
 
           <div class="col-lg-5 text-center mt-4 mt-lg-0">
             <img
-
               src="imagens/logo.png"
-
               src="imagens/mtec-lobo.png"
-
               alt="Lobo Mtec Informática para Internet"
               class="mtec-logo img-fluid"
               style="
@@ -432,7 +468,96 @@
 
       <p>Página principal do website.</p>
 
-      <!-- TRÊS CARDS DOURADOS -->
+      <div class="accordion accordion-mtec" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              Accordion Item #1
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse show"
+          >
+            <div class="accordion-body">
+              <strong>This is the first item’s accordion body.</strong> It is
+              shown by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo"
+            >
+              Accordion Item #2
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <strong>This is the second item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree"
+            >
+              Accordion Item #3
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item’s accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It’s also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
         <div class="col">
           <div class="card card-mtec h-100">
