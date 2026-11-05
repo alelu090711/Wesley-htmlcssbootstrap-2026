@@ -8,7 +8,7 @@
 
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/estilo.css?v=3" rel="stylesheet" />
-
+    <!--o começo do style-->
     <style>
       :root,
       [data-bs-theme="dark"] {
@@ -287,12 +287,16 @@
         }
       }
     </style>
+    <!--o fim do style-->
   </head>
-
+  <!--começo do body-->
   <body data-bs-theme="dark" class="overflow-x-hidden">
+    <!--o começo do código "nav" é uma função para ter um menu de navegação-->
     <nav class="navbar navbar-expand-md navbar-mtec fixed-top text-uppercase">
       <div class="container-fluid">
+        <!--Código "a" serve para conseguir levar para outra página-->
         <a class="navbar-brand active" href="index.html">
+          <!--a img primeira imagem "Logo.png"-->
           <img
             src="imagens/logo.png"
             alt="Logo Mtec"
@@ -300,8 +304,10 @@
             height="62"
             class="d-inline-block align-text-top"
           />
+          <!--o fim do codigo de imagem"logo.png"-->
         </a>
-
+        <!--O fim do código "a"-->
+        <!--Código "button" é uma função para ter o menu colapsável-->
         <button
           class="navbar-toggler"
           type="button"
@@ -311,15 +317,21 @@
           aria-expanded="false"
           aria-label="Abrir menu"
         >
+          <!--Código "span" é uma função para ter o ícone do menu colapsável-->
           <span class="navbar-toggler-icon"></span>
+          <!--O fim do código "span"-->
         </button>
-
+        <!--O fim do código "button"-->
+        <!--Código "div" é uma função para ter um navbar-->
         <div class="collapse navbar-collapse" id="menuprincipal">
+          <!--Código "ul" é uma função para ter um menu de navegação-->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!--O fim do código "ul"-->
+            <!--Código "li" é uma função para ter um item de navegação-->
             <li class="nav-item">
               <a class="nav-link" href="primeiro.html"> 1ª Série </a>
             </li>
-
+            <!--O fim do código "li"-->
             <li class="nav-item">
               <a class="nav-link" href="segundo.html"> 2ª Série </a>
             </li>
@@ -329,11 +341,20 @@
             </li>
           </ul>
 
-          <a href="#matricula" class="btn btn-matricula"> Matricule-se </a>
+          <a
+            href="https://vestibulinho.etec.sp.gov.br/home/"
+            class="btn btn-matricula"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Matricule-se
+          </a>
         </div>
+        <!--O fim do código "div"-->
       </div>
     </nav>
-
+    <!--O fim do código "nav"-->
+    <!--o começo do código "header" é uma função para ter um cabeçalho-->
     <header
       class="banner text-white overflow-hidden"
       style="
@@ -354,12 +375,14 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-7">
+            <!--Código "h1" é uma função para ter um título-->
             <h1 class="display-5 fw-bold">Mtec Informática para Internet</h1>
-
+            <!--O fim do código "h1"-->
+            <!--Código "p" é uma função para ter um parágrafo-->
             <p class="text-uppercase small fw-semibold mb-2">
               Etec Prof. Milton Gazzetti. Presidente Venceslau
             </p>
-
+            <!--O fim do código "p"-->
             <p class="lead mb-4">
               Curso técnico de informática para internet, com duração de 3 anos.
             </p>
@@ -385,7 +408,8 @@
         </div>
       </div>
     </header>
-
+    <!--O fim do código "header"-->
+    <!--o começo do código "section" é uma função para ter uma seção-->
     <section class="container my-5">
       <div id="carouselMtec" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -445,8 +469,9 @@
           data-bs-target="#carouselMtec"
           data-bs-slide="prev"
         >
+          <!--Código "span" é uma função para ter o ícone do controle anterior do carrossel-->
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
+          <!--O fim do código "span"-->
           <span class="visually-hidden"> Anterior </span>
         </button>
 
@@ -456,133 +481,83 @@
           data-bs-target="#carouselMtec"
           data-bs-slide="next"
         >
+          <!--Código "span" é uma função para ter o ícone do controle próximo do carrossel-->
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
+          <!--O fim do código "span"-->
           <span class="visually-hidden"> Próximo </span>
         </button>
       </div>
     </section>
-
+    <!--O fim do código "section"-->
+    <!--o começo do código "main" é uma função para ter o conteúdo principal-->
     <main class="container my-5">
+      <!--Código "h2" é uma função para ter um subtítulo-->
       <h2 class="titulo-dourado">Mtec Informática para Internet</h2>
-
+      <!--O fim do código "h2"-->
       <p>Página principal do website.</p>
 
       <div class="accordion accordion-mtec" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseOne"
-              aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseOne"
-            >
-              Accordion Item #1
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapseOne"
-            class="accordion-collapse collapse show"
-          >
-            <div class="accordion-body">
-              <strong>This is the first item’s accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo"
-              aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseTwo"
-            >
-              Accordion Item #2
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapseTwo"
-            class="accordion-collapse collapse"
-          >
-            <div class="accordion-body">
-              <strong>This is the second item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseThree"
-              aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseThree"
-            >
-              Accordion Item #3
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapseThree"
-            class="accordion-collapse collapse"
-          >
-            <div class="accordion-body">
-              <strong>This is the third item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseOne"
+        aria-expanded="true"
+        aria-controls="panelsStayOpen-collapseOne">
+        O que é o curso Mtec Informática para Internet?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        <strong>É um curso técnico com duração de 3 anos</strong>, oferecido na
+        Etec Prof. Milton Gazzetti, em Presidente Venceslau. Nele, o aluno
+        aprende a programar, criar sites e desenvolver interfaces digitais,
+        saindo com uma formação prática para o mercado de tecnologia.
       </div>
+    </div>
+  </div>
 
-      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
-        <div class="col">
-          <div class="card card-mtec h-100">
-            <div class="card-header">Aprendizado</div>
-            <div class="card-body">
-              <h5 class="card-title">Programação e sites</h5>
-              <p class="card-text">
-                Aprenda a programar e a criar sites completos, do código à
-                publicação.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseTwo"
+        aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseTwo">
+        O que vou aprender durante o curso?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>Programação, criação de sites e design.</strong> Você vai
+        trabalhar com HTML, CSS e JavaScript, aprender a montar páginas
+        completas, do código à publicação, e criar interfaces com ferramentas
+        como o Canva.
+      </div>
+    </div>
+  </div>
 
-        <div class="col">
-          <div class="card card-mtec h-100">
-            <div class="card-header">Design</div>
-            <div class="card-body">
-              <h5 class="card-title">Interfaces digitais</h5>
-              <p class="card-text">
-                Crie designs e interfaces com ferramentas como o Canva.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseThree"
+        aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseThree">
+        Como faço para entrar no curso?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <strong>A entrada é pelo Vestibulinho da Etec.</strong> Basta clicar em
+        "Quero me matricular" mais abaixo, acompanhar as datas de inscrição no
+        site oficial e, em caso de dúvida, falar diretamente com a escola.
+      </div>
+    </div>
+  </div>
+
+</div>
 
         <div class="col">
           <div class="card card-mtec h-100">
@@ -630,7 +605,14 @@
             curso.
           </p>
 
-          <a href="#" class="btn btn-matricula"> Quero me matricular </a>
+          <a
+            href="https://vestibulinho.etec.sp.gov.br/home/"
+            class="btn btn-matricula"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quero me matricular
+          </a>
         </div>
       </div>
     </section>
